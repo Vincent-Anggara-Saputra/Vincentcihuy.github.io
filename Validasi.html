@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Validasi Formulir Login
+document.getElementById('loginForm').addEventListener('submit', function(event) {
+    const username = document.getElementById('username').value.trim();
+    const password = document.getElementById('password').value.trim();
+
+    // Validasi Username
+    if (username === '') {
+        alert('Username harus diisi!');
+        event.preventDefault(); // Mencegah form terkirim
+        return;
+    }
+
+    // Validasi Password
+    if (password === '') {
+        alert('Password harus diisi!');
+        event.preventDefault();
+        return;
+    }
+
+    // Validasi Panjang Password
+    if (password.length < 6) {
+        alert('Password harus minimal 6 karakter!');
+        event.preventDefault();
+        return;
+    }
+
+    alert('Login berhasil!'); // Jika semua validasi lolos
+});
+
+// Validasi Formulir Transaksi (Contoh Tambahan)
+document.getElementById('transaksiForm')?.addEventListener('submit', function(event) {
+    const namaTransaksi = document.getElementById('namaTransaksi').value.trim();
+    const jumlahTransaksi = document.getElementById('jumlahTransaksi').value.trim();
+    const kategoriTransaksi = document.getElementById('kategoriTransaksi').value;
+
+    // Validasi Nama Transaksi
+    if (namaTransaksi === '') {
+        alert('Nama transaksi harus diisi!');
+        event.preventDefault();
+        return;
+    }
+
+    // Validasi Jumlah Transaksi
+    if (jumlahTransaksi === '' || isNaN(jumlahTransaksi) || Number(jumlahTransaksi) <= 0) {
+        alert('Jumlah transaksi harus berupa angka dan lebih dari 0!');
+        event.preventDefault();
+        return;
+    }
+
+    // Validasi Kategori Transaksi
+    if (kategoriTransaksi === 'default') {
+        alert('Kategori transaksi harus dipilih!');
+        event.preventDefault();
+        return;
+    }
+
+    alert('Form transaksi berhasil disimpan!'); // Jika semua validasi lolos
+});
+
+// Validasi Formulir Pendaftaran (Contoh Tambahan)
+document.getElementById('registerForm')?.addEventListener('submit', function(event) {
+    const email = document.getElementById('email').value.trim();
+    const password = document.getElementById('regPassword').value.trim();
+    const confirmPassword = document.getElementById('confirmPassword').value.trim();
+
+    // Validasi Email
+    const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    if (!emailPattern.test(email)) {
+        alert('Email tidak valid!');
+        event.preventDefault();
+        return;
+    }
+
+    // Validasi Password
+    if (password.length < 6) {
+        alert('Password harus minimal 6 karakter!');
+        event.preventDefault();
+        return;
+    }
+
+    // Validasi Konfirmasi Password
+    if (password !== confirmPassword) {
+        alert('Konfirmasi password tidak cocok!');
+        event.preventDefault();
+        return;
+    }
+
+    alert('Pendaftaran berhasil!'); // Jika semua validasi lolos
+}
+    </script>
+</body>
+</html>

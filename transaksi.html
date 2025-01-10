@@ -1,0 +1,53 @@
+
+<!-- https://www.malasngoding.com/membuat-navbar-responsive-html-css/ -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Aplikasi Perpustakaan</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+ 
+<nav class="navbar">
+	<div class="container">
+ 
+		<a href="beranda.html" class="logo">Perpustakaan</a>
+		
+		<ul class="menu">
+			<li><a href="beranda.html">Beranda</a></li>
+			<li><a href="transaksi.html">Transaksi</a></li>
+			<li><a href="profile.html">Profile</a></li>
+		</ul>
+ 
+ 
+		<div class="tombol">
+			&#9776;
+		</div>
+ 
+	</div>
+</nav>
+<main>
+    <h1>Halaman Transaksi</h1>
+    <form id="transaksiForm">
+        <label for="namaTransaksi">Nama Transaksi:</label><br>
+        <input type="text" id="namaTransaksi" name="namaTransaksi" required><br><br>
+
+        <label for="jumlah">Jumlah:</label><br>
+        <input type="number" id="jumlah" name="jumlah" required><br><br>
+
+        <label for="kategori">Kategori:</label><br>
+        <select id="kategori" name="kategori" required>
+            <option value="peminjaman">Peminjaman</option>
+            <option value="pengembalian">Pengembalian</option>
+        </select><br><br>
+
+        <button type="submit">Simpan</button>
+    </form>
+    <a href="daftar_transaksi.html">Lihat Daftar Transaksi</a>
+</main>
+
+</body>
+</html>
