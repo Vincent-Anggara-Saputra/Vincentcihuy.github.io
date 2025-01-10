@@ -1,0 +1,73 @@
+
+<!-- https://www.malasngoding.com/membuat-navbar-responsive-html-css/ -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Perpustakaan</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+	<header>
+        <!-- Bagian Header Situs Web -->
+    </header>
+
+	<nav class="navbar">
+		<div class="container">
+
+			<a href="beranda.html" class="logo">Perpustakaan</a>
+			
+			<ul class="menu">
+				<li><a href="beranda.html">Beranda</a></li>
+				<li><a href="transaksi.html">Transaksi</a></li>
+				<li><a href="profile.html">Profile</a></li>
+			</ul>
+			<div class="tombol">
+				&#9776;
+			</div>
+
+		</div>
+	</nav>
+
+	<main>
+		<div>
+			<center>
+				<h2>Halaman Beranda</h2>
+			</center>
+
+
+			<h1>Selamat Datang di Situs Saya!</h1>
+			<p>Berikut adalah beberapa langkah-langkah menggunakan aplikasi perpustakaan:</p>
+			<p>1. Pendaftaran: Isi formulir pendaftaran dengan lengkap dan benar.</p>
+			<p>2. Aktivasi akun: Buka email yang dikirimkan oleh sistem dan klik link aktivasi</p>
+			<P>3. Login: Masukkan email dan kata sandi yang telah terdaftar.</P>
+			<p>4. Mencari buku: Cari buku berdasarkan judul, penulis, penerbit, atau kalimat yang ada di dalam buku.</p>
+			<P>5. Meminjam buku: Pilih buku yang ingin dipinjam, lalu klik tombol pinjam. </P>
+			<P>6. Membaca buku: Gunakan fitur reader untuk membaca buku.</P>
+			<P>7. Mengembalikan buku: Klik selesai baca untuk mengembalikan buku yang sedang dibaca. </P>
+
+		</div>
+	</main>
+
+	<footer>
+		<p>&copy; Vincent Situs Web. All rights reserved.</p>
+	</footer>
+
+<script type="text/javascript">
+	// deklarasi tombol dan menu
+	const tombol = document.querySelector('.tombol');
+	const menu = document.querySelector('.menu');
+
+	// membuat event click
+	// pada saat tombol di click, tambahkan class aktif pada class menu
+	// saat diklik lagi, maka class aktif dihilangkan dari class menu (toggle)
+	tombol.addEventListener('click', () => {
+		menu.classList.toggle('aktif');
+	});
+</script>
+
+</body>
+</html>
